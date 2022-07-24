@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function disableBack() {
+        window.history.forward();
+      }
+      setTimeout("disableBack()", 0);
+      window.onunload = function () {
+        null;
+      };
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Assignment</title>
+    <script
+      src="https://kit.fontawesome.com/183bb9ff65.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/1.jpg" class="img-card" />
+
+      <form id="sign_form_id" action="login.html">
+        <h1>SIGN UP</h1>
+        <div class="input-class">
+          <i class="fa-solid fa-user-pen"></i>
+          <input
+            type="text"
+            placeholder="User Name"
+            required
+            id="user_id"
+            minlength="4"
+            maxlength="10"
+          />
+          <i
+            class="fa-solid fa-circle-xmark"
+            id="x_id"
+            style="visibility: hidden; color: red"
+          ></i>
+        </div>
+        <div class="input-class">
+          <i class="fa-solid fa-envelope-circle-check"></i>
+          <input type="text" placeholder="Email" required id="email_id" />
+          <i
+            class="fa-solid fa-circle-xmark"
+            id="x_email_id"
+            style="visibility: hidden; color: red"
+          ></i>
+        </div>
+        <div class="input-class">
+          <i class="fa-solid fa-lock"></i>
+          <input
+            type="password"
+            placeholder="Create Password"
+            required
+            id="pass_id"
+            minlength="8"
+            maxlength="15"
+          />
+          <i
+            class="fa-solid fa-circle-xmark"
+            style="visibility: hidden; color: red"
+          ></i>
+        </div>
+        <div class="input-class">
+          <i class="fa-solid fa-lock"></i>
+          <input
+            type="password"
+            placeholder="Re-Write Password"
+            required
+            id="repass_id"
+          />
+          <i
+            class="fa-solid fa-circle-xmark"
+            id="x_pass_id"
+            style="visibility: hidden; color: red"
+          ></i>
+        </div>
+        <button type="submit" id="btn_id">
+          Sign Up <img src="images/arrow.png" id="arr_id" />
+        </button>
+      </form>
+    </div>
+
+    <script src="sign.js"></script>
+  </body>
+</html>

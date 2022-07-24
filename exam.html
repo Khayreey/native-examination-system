@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function disableBack() {
+        window.history.forward();
+      }
+      setTimeout("disableBack()", 0);
+      window.onunload = function () {
+        null;
+      };
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Page</title>
+    <script
+      src="https://kit.fontawesome.com/183bb9ff65.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="examStyle.css" />
+  </head>
+  <body>
+    <div class="container" id="main">
+      <div class="questions">
+        <div class="question-mark">
+          <h1 id="question_id">Waiting for question</h1>
+        </div>
+        <div class="answers">
+          <ol type="A" id="answer_list_id">
+            <li>
+              <input type="radio" id="a" name="answer" />
+              <label for="a"> </label>
+            </li>
+            <li>
+              <input type="radio" id="b" name="answer" />
+              <label for="b"> </label>
+            </li>
+
+            <li>
+              <input type="radio" id="c" name="answer" />
+              <label for="c"> </label>
+            </li>
+
+            <li>
+              <input type="radio" id="d" name="answer" />
+              <label for="d"> </label>
+            </li>
+          </ol>
+        </div>
+        <button class="mark-btn" id="mark_id">Mark</button>
+        <div class="answer-btns">
+          <i
+            class="fa-solid fa-circle-chevron-left"
+            id="back_id"
+            style="visibility: hidden"
+          >
+          </i>
+          <span id="question_num_id">1</span>
+          <i class="fa-solid fa-circle-chevron-right" id="next_id"></i>
+        </div>
+        <button id="res_id">FINISH</button>
+      </div>
+      <div class="timer">
+        <div class="timer-div">
+          <p id="clock"></p>
+        </div>
+        <div class="mark-questions">
+          <ul id="marked_id"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="res" id="result">
+      <h1 id="msg">Congratulation</h1>
+      <span id="name">Ahmed</span>
+      <p id="passed">You Passed Your Exam</p>
+      <img src="images/exam.png" alt="" />
+      <button id="done_btn"><a href="index.html">Done</a></button>
+    </div>
+    <script src="exam.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function disableBack() {
+        window.history.forward();
+      }
+      setTimeout("disableBack()", 0);
+      window.onunload = function () {
+        null;
+      };
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="txt">
+          <p>
+            Be Part Of The Future And , <span>Join Us Now</span> Take A Step ,
+            Make A Change
+          </p>
+
+          <a href="sign.html">Get Started</a>
+        </div>
+        <div class="img">
+          <div class="social-icons">
+            <img src="images/js.png" />
+            <img src="images/node.png" />
+            <img src="images/ang.png" />
+            <img src="images/react.png" />
+          </div>
+          <img src="images/eml.png" class="email-icon" />
+        </div>
+      </div>
+      <div class="wave">
+        <img src="images/wave.svg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
